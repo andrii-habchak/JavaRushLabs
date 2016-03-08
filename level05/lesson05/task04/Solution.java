@@ -5,15 +5,13 @@ package com.javarush.test.level05.lesson05.task04;
 Использовать класс Cat из первой задачи. Класс Cat создавать не надо.
 */
 
-import com.javarush.test.level05.lesson05.task01.Cat;
 
 public class Solution {
     public static void main(String[] args) {
 
-        Cat vaska = new Cat("Vaska", 3, 9, 9);
-        Cat barsik = new Cat("Barsik", 2, 7, 7);
-        Cat mursik = new Cat("Mursik", 4, 11, 10);
-        //напишите тут ваш код
+        Cat mycat1 = new Cat("ivan", 5,5,5);
+        Cat mycat2 = new Cat("vasya", 6,6,6);
+        Cat mycat3 = new Cat("petya", 7,7,7);
     }
 
     public static class Cat {
