@@ -1,6 +1,7 @@
 package com.javarush.test.level05.lesson12.bonus03;
 
 import java.io.*;
+import java.util.Arrays;
 
 /* Задача по алгоритмам
 Написать программу, которая:
@@ -14,13 +15,17 @@ public class Solution
     public static void main(String[] args) throws Exception
     {
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
-        int maximum = ;
+        int n = Integer.parseInt(reader.readLine());
 
-        //напишите тут ваш код
+        int[] array = new int[n];
 
+        for (int i = 0; i < array.length; i++) {
+            array[i] = Integer.parseInt(reader.readLine());
+        }
 
+        Arrays.sort(array);
 
-
+        int maximum = array[array.length - 1];
         System.out.println(maximum);
     }
 }
