@@ -7,11 +7,9 @@ name1 проспонсировал name2, и она стала известно�
 Коля проспонсировал Лену, и она стала известной певицей.
 */
 
-<<<<<<< HEAD
-=======
+
 import com.sun.org.apache.xerces.internal.util.SynchronizedSymbolTable;
 
->>>>>>> 2fb5e8213875d54d9aa85a522823c454221381d4
 import java.io.*;
 
 public class Solution

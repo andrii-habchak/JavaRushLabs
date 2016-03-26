@@ -17,10 +17,7 @@ package com.javarush.test.level04.lesson04.task09;
 зеленый
 */
 
-<<<<<<< HEAD
-=======
 import java.io.*;
->>>>>>> 2fb5e8213875d54d9aa85a522823c454221381d4
 import java.util.Scanner;
 
 public class Solution

@@ -11,10 +11,7 @@ package com.javarush.test.level04.lesson04.task07;
 */
 
 import java.io.*;
-<<<<<<< HEAD
-=======
 import java.util.zip.InflaterInputStream;
->>>>>>> 2fb5e8213875d54d9aa85a522823c454221381d4
 
 public class Solution
 {
