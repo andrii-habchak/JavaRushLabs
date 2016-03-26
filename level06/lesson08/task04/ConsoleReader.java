@@ -1,5 +1,10 @@
 package com.javarush.test.level06.lesson08.task04;
 
+<<<<<<< HEAD
+=======
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+>>>>>>> 2fb5e8213875d54d9aa85a522823c454221381d4
 import java.util.Scanner;
 
 /* Класс ConsoleReader

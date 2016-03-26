@@ -6,6 +6,11 @@ package com.javarush.test.level04.lesson04.task02;
 Подсказка:  используйте метод public static int abs(int a), который возвращает абсолютную величину числа.
 */
 
+<<<<<<< HEAD
+=======
+import com.sun.org.apache.xpath.internal.SourceTree;
+
+>>>>>>> 2fb5e8213875d54d9aa85a522823c454221381d4
 public class Solution
 {
     public static void main(String[] args)
