@@ -33,6 +33,7 @@ public class Solution
         list.add("лоза"); //2
         list.add("ларец"); //2
         list.add("роль"); //2
+        list.add("рорь"); //2
 
         list = fix(list);
 
@@ -50,6 +51,8 @@ public class Solution
                 sortedList.add(list.get(i));
             } else if (list.get(i).contains("л")){
                 sortedList.add(list.get(i));
+                sortedList.add(list.get(i));
+            } else if (!(list.get(i).contains("р"))){
                 sortedList.add(list.get(i));
             }
         }
