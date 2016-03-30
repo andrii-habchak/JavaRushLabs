@@ -23,11 +23,9 @@ public class Solution
             list.add(i, scanner.next());
         }
 
-
-        for (int i = 0; i < 13; i++) {
-            String lastElemets = list.get(list.size() - 1);
-            list.remove(list.get(list.size() - 1));
-            list.add(0, lastElemets);
+        for (int i = 0; i < 2; i++) {
+            list.add(0, list.get(list.size() - 1));
+            list.remove(list.size() - 1);
         }
 
         for (String s : list) {
