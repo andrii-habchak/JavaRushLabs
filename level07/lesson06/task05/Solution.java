@@ -24,9 +24,10 @@ public class Solution
         }
 
 
-        for (int i = 0; i < 2; i++) {
-            list.add(0, list.get(list.size() - 1));
+        for (int i = 0; i < 13; i++) {
+            String lastElemets = list.get(list.size() - 1);
             list.remove(list.get(list.size() - 1));
+            list.add(0, lastElemets);
         }
 
         for (String s : list) {
