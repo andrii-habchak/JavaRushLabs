@@ -14,7 +14,8 @@ public class Solution
 {
     public static void main(String[] args) throws Exception
     {
-        String[] cats = new String[] {"васька", "мурка", "дымка", "рыжик", "серый", "снежок", "босс", "борис", "визя", "гарфи"};
+        String[] cats = new String[] {"васька", "мурка", "дымка", "рыжик",
+                "серый", "снежок", "босс", "борис", "визя", "гарфи"};
 
         HashMap<String, Cat> map = addCatsToMap(cats);
 
@@ -27,7 +28,7 @@ public class Solution
 
     public static HashMap<String, Cat> addCatsToMap(String[] cats)
     {
-        HashMap<String, Cat> catHashMap = new HashMap<String, Cat>();
+        HashMap<String, Cat> catHashMap = new HashMap<>();
 
         for (String iter : cats) {
             catHashMap.put(iter, new Cat(iter));
