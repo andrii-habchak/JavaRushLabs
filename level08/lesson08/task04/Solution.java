@@ -12,6 +12,7 @@ import java.util.Map;
 
 public class Solution
 {
+
     public static HashMap<String, Date> createMap(){
 
         HashMap<String, Date> map = new HashMap<String, Date>();
