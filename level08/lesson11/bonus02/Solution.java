@@ -38,7 +38,6 @@ public class Solution
             String city = reader.readLine();
             if (city.isEmpty()) break;
             String family = reader.readLine();
-“
             map.put(city, family);
         }
 
