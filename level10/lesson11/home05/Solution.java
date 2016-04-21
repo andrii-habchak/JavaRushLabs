@@ -45,6 +45,7 @@ public class Solution
         }
 
         //напишите тут ваш код
+        //HashMap was used
         HashMap<Character, Integer> alphabetMap = new HashMap<Character, Integer>();
         for (Character listItem : alphabet) {
             alphabetMap.put(listItem, 0);
@@ -61,6 +62,26 @@ public class Solution
 
         for (Map.Entry<Character, Integer> iterator : alphabetMap.entrySet()) {
             if (iterator.getValue() > 0) System.out.println(iterator.getKey() + " " + iterator.getValue());
+        }
+
+        //ArrayList was used
+        ArrayList<Integer> countList = new ArrayList<Integer>();
+        char[] stringToChararray;
+        int count;
+        for (int i = 0; i < alphabet.size(); i++) {
+            count = 0;
+            for (int j = 0; j < list.size(); j++) {
+                stringToChararray = list.get(j).toCharArray();
+                for (int k = 0; k < stringToChararray.length; k++) {
+                    if(String.valueOf(stringToChararray[k]).equals(String.valueOf(alphabet.get(i)))) {
+                        count++;
+                    }
+                }
+            }
+            countList.add(count);
+        }
+        for (int i = 0; i < alphabet.size(); i++) {
+            System.out.println(alphabet.get(i) + " " + countList.get(i));
         }
     }
 
