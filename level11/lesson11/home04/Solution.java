@@ -5,24 +5,19 @@ package com.javarush.test.level11.lesson11.home04;
 Унаследовать христианство от иудаизма и мусульманство от христианства.
 */
 
-public class Solution
-{
-    public static void main(String[] args)
-    {
+public class Solution {
+    public static void main(String[] args) {
     }
 
-    public class Judaism
-    {
+    public class Judaism {
 
     }
 
-    public class Christianity
-    {
+    public class Christianity extends Judaism {
 
     }
 
-    public class Islam
-    {
+    public class Islam extends Christianity {
 
     }
 
