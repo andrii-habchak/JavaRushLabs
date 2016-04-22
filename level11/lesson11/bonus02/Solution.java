@@ -4,33 +4,29 @@ package com.javarush.test.level11.lesson11.bonus02;
 Добавь общий базовый класс к классам-фигур:  (фигуры из шахмат).
 */
 
-public class Solution
-{
-    public static void main(String[] args)
-    {
+public class Solution {
+    public static void main(String[] args) {
     }
 
-    public class King
-    {
+    public class ChessItem {
+
     }
 
-    public class Queen
-    {
+    public class King extends ChessItem {
     }
 
-    public class Rook
-    {
+    public class Queen extends ChessItem {
     }
 
-    public class Knight
-    {
+    public class Rook extends ChessItem {
     }
 
-    public class Bishop
-    {
+    public class Knight extends ChessItem {
     }
 
-    public class Pawn
-    {
+    public class Bishop extends ChessItem {
+    }
+
+    public class Pawn extends ChessItem {
     }
 }
