@@ -23,9 +23,17 @@ public class Solution
             return new Pair<Integer, Integer>(null, null);
         }
 
-        //Напишите тут ваше решение
-
-        return new Pair<Integer, Integer>(0, 0);
+        int length = array.length - 1;
+        for (int i = length; i > 0; i--) {
+            for (int j = 0; j < i; j++) {
+                if (array[j] > array[j+1]) {
+                    int temp = array[j];
+                    array[j] = array[j+1];
+                    array[j+1] = temp;
+                }
+            }
+        }
+        return new Pair<Integer, Integer>(array[0], array[length]);
     }
 
 
