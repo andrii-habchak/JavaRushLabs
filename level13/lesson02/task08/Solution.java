@@ -8,9 +8,15 @@ package com.javarush.test.level13.lesson02.task08;
 5. Унаследуй интерфейс Presidentable от интерфейса Person.
 */
 
-public class Solution
-{
-    public static void main(String[] args) throws Exception
-    {
+public class Solution {
+    public static void main(String[] args) throws Exception {
+    }
+
+    interface Person {
+        boolean isAlive();
+    }
+
+    interface Presidentable extends Person {
+
     }
 }
