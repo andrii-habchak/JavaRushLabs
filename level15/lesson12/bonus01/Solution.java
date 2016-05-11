@@ -3,6 +3,7 @@ package com.javarush.test.level15.lesson12.bonus01;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.util.Scanner;
 
 /* Осваивание статического блока
 1. В отдельных файлах создать классы Plane и Helicopter, реализующие интерфейс Flyable.
@@ -18,11 +19,21 @@ import java.io.InputStreamReader;
 public class Solution {
     static {
         //add your code here - добавьте код тут
+        reset();
     }
 
     public static Flyable result;
 
     public static void reset() {
         //add your code here - добавьте код тут
+        Scanner scanner = new Scanner(System.in);
+        String input = scanner.next();
+        if (input.equals("helicopter")) {
+            result = new Helicopter();
+        } else if (input.equals("plane")) {
+            result = new Plane(scanner.nextInt());
+        }
+        scanner.close();
     }
 }
+
