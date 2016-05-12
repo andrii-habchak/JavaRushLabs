@@ -22,9 +22,67 @@ obj name
 double 3.14
 */
 
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.ArrayList;
+
 public class Solution {
     public static void main(String[] args) {
         //add your code here
+
+        BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+        String url;
+        try {
+            url  = reader.readLine();
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+
+        ArrayList<String> objParameters = parsingParameter(url);
+        parsingObjParameters(objParameters);
+
+    }
+
+    private static ArrayList<String> parsingParameter(String url) {
+        int indexOfParameters = url.indexOf("?") + 1;
+        String allParameters = url.substring(indexOfParameters);
+        String [] parameters = allParameters.split("&");
+
+        ArrayList<String> namesOfParameter = new ArrayList<>();
+        ArrayList<String> objParameters = new ArrayList<>();
+
+        for (String parameter : parameters) {
+            if (parameter.contains("=")) {
+                String [] parameterAndValue = parameter.split("="); // index 0 it's name of parameter and index 1 it's value
+                namesOfParameter.add(parameterAndValue[0]);
+                if (parameter.contains("obj")) {
+                    objParameters.add(parameterAndValue[1]);
+                }
+            } else {
+                namesOfParameter.add(parameter);
+            }
+        }
+        printNameParameters(namesOfParameter);
+        return objParameters;
+    }
+
+    private static void printNameParameters(ArrayList<String> namesOfParameter) {
+        for (String name : namesOfParameter) {
+            System.out.print(name + " ");
+        }
+        System.out.println("");
+    }
+
+    private static void parsingObjParameters(ArrayList<String> objParameters) {
+        for (String objParameter : objParameters) {
+            try {
+                double valueOfParameter = Double.parseDouble(objParameter);
+                alert(valueOfParameter);
+            } catch (NumberFormatException e) {
+                alert(objParameter);
+            }
+        }
     }
 
     public static void alert(double value) {
