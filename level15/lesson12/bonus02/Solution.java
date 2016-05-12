@@ -5,7 +5,8 @@ package com.javarush.test.level15.lesson12.bonus02;
 - void getRightCup() - выбрать подходящую чашку
 - void putIngredient() - положить ингредиенты
 - void pour() - залить жидкостью
-2. В классе DrinkMaker создать и реализовать метод void makeDrink(), который готовит напиток в такой последовательности: выбирает чашку, кладет ингредиенты, заливает жидкостью.
+2. В классе DrinkMaker создать и реализовать метод void makeDrink(),
+который готовит напиток в такой последовательности: выбирает чашку, кладет ингредиенты, заливает жидкостью.
 3. В отдельных файлах создать классы LatteMaker и TeaMaker, которые наследуются от DrinkMaker.
 4. Распредели следующие фразы между всеми методами в классах LatteMaker и TeaMaker, различные фразы для различных методов.
 5. Каждый метод должен выводить в консоль свою фразу не пересекаясь с другими методами.
@@ -20,5 +21,11 @@ package com.javarush.test.level15.lesson12.bonus02;
 
 public class Solution {
     public static void main(String[] args) {
+        //block of code only for test
+        DrinkMaker latteMaker = new LatteMaker();
+        latteMaker.makeDrink();
+        DrinkMaker teaMaker = new TeaMaker();
+        teaMaker.makeDrink();
     }
 }
+
