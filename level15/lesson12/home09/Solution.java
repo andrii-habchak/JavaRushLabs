@@ -28,61 +28,57 @@ import java.io.InputStreamReader;
 import java.util.ArrayList;
 
 public class Solution {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
         //add your code here
+        ArrayList<String> parametersList = new ArrayList<>();
+        ArrayList<String> alertList = new ArrayList<>();
 
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
-        String url;
-        try {
-            url  = reader.readLine();
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }
+        String url = reader.readLine();
 
-        ArrayList<String> objParameters = parsingParameter(url);
-        parsingObjParameters(objParameters);
+        parsing(parametersList, alertList, url);
+
+        printParameters(parametersList);
+
+        whichAlert(alertList);
 
     }
 
-    private static ArrayList<String> parsingParameter(String url) {
+    private static void parsing(ArrayList<String> parametersList, ArrayList<String> alertList, String url) {
         int indexOfParameters = url.indexOf("?") + 1;
         String allParameters = url.substring(indexOfParameters);
-        String [] parameters = allParameters.split("&");
+        String[] parametersArray = allParameters.split("&");
 
-        ArrayList<String> namesOfParameter = new ArrayList<>();
-        ArrayList<String> objParameters = new ArrayList<>();
-
-        for (String parameter : parameters) {
+        for (String parameter : parametersArray) {
             if (parameter.contains("=")) {
-                String [] parameterAndValue = parameter.split("="); // index 0 it's name of parameter and index 1 it's value
-                namesOfParameter.add(parameterAndValue[0]);
-                if (parameter.contains("obj")) {
-                    objParameters.add(parameterAndValue[1]);
+                String[] parameterAndValue = parameter.split("=");
+                parametersList.add(parameterAndValue[0]);
+                if (parameterAndValue[0].equals("obj")) {
+                    alertList.add(parameterAndValue[1]);
                 }
             } else {
-                namesOfParameter.add(parameter);
+                parametersList.add(parameter);
             }
         }
-        printNameParameters(namesOfParameter);
-        return objParameters;
     }
 
-    private static void printNameParameters(ArrayList<String> namesOfParameter) {
-        for (String name : namesOfParameter) {
-            System.out.print(name + " ");
-        }
-        System.out.println("");
-    }
-
-    private static void parsingObjParameters(ArrayList<String> objParameters) {
-        for (String objParameter : objParameters) {
+    private static void whichAlert(ArrayList<String> alertList) {
+        for (String alertOne : alertList) {
             try {
-                double valueOfParameter = Double.parseDouble(objParameter);
-                alert(valueOfParameter);
+                double alertDouble = Double.parseDouble(alertOne);
+                alert(alertDouble);
             } catch (NumberFormatException e) {
-                alert(objParameter);
+                alert(alertOne);
             }
         }
+    }
+
+    private static void printParameters(ArrayList<String> parametersList) {
+        int lastElemets = parametersList.size() - 1;
+        for (int i = 0; i < lastElemets; i++) {
+            System.out.print(parametersList.get(i) + " ");
+        }
+        System.out.println(parametersList.get(lastElemets));
     }
 
     public static void alert(double value) {
