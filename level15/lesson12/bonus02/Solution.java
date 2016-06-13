@@ -21,7 +21,7 @@ package com.javarush.test.level15.lesson12.bonus02;
 
 public class Solution {
     public static void main(String[] args) {
-        //block of code only for test
+        //block of code only for ThreadJoinExample
         DrinkMaker latteMaker = new LatteMaker();
         latteMaker.makeDrink();
         DrinkMaker teaMaker = new TeaMaker();
