@@ -16,7 +16,8 @@ import java.util.List;
 public class Solution {
     public static void main(String[] args) {
 
-
+        NoteThread noteThread = new NoteThread();
+        noteThread.start();
     }
 
     public static class Note {
@@ -38,10 +39,12 @@ public class Solution {
     }
 
     public static class NoteThread extends Thread {
+
         @Override
         public void run() {
             for (int i = 0; i < 999; i++) {
                 Note.addNote(this.getName() + "-Note" + i);
+                Note.removeNote(this.getName());
             }
         }
     }
