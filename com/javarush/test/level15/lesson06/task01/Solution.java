@@ -10,7 +10,7 @@ PS: Взаимосвязь между объектами me и zapp - Has-a (и�
 public class Solution {
     public static void main(String[] args) {
         JuniorJavaDev me = new JuniorJavaDev();
-        System.out.println(me.askHubert("What do you think about level15.lesson06.task01?"));
+        System.out.println(me.askHubert("What do you think about com.javarush.test.level15.lesson06.task01?"));
         System.out.println(me.askZapp("When will be the next update?"));
     }
 
